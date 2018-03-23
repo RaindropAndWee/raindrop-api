@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('raindrop-shop-api:users')
+const debug = require('debug')('raindrop-api:users')
 
 const controller = require('lib/wiring/controller')
 const models = require('app/models')

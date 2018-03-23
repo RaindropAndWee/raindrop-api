@@ -1,6 +1,6 @@
 'use strict'
 
-const mongooseBaseName = 'raindrop-shop-api'
+const mongooseBaseName = 'raindrop-api'
 
 const environment = process.env.NODE_ENV || 'development'
 const database = {
