@@ -7,6 +7,12 @@ const cartSchema = new mongoose.Schema({
     type: Boolean,
     required: true
   },
+  cartProducts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Product'
+    }
+  ],
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

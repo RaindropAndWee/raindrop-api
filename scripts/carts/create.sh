@@ -10,7 +10,8 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "cart": {
-      "purchased": "'"${PURCHASED}"'"
+      "purchased": "'"${PURCHASED}"'",
+      "cartProducts": ["'"${PRODUCT_ID}"'"]
     }
   }'
 
