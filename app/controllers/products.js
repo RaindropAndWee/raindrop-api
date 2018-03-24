@@ -18,8 +18,9 @@ const index = (req, res, next) => {
 }
 
 const show = (req, res) => {
+  console.log('Hello')
   res.json({
-    product: req.product.toJSON({ virtuals: true, user: req.user })
+    product: req.product.toJSON()
   })
 }
 
@@ -34,7 +35,9 @@ const create = (req, res, next) => {
     .catch(next)
 }
 
+// Does not work, may have to do with ownership and before methods
 const update = (req, res, next) => {
+  console.log('Hello')
   delete req.body.product._owner  // disallow owner reassignment.
 
   req.product.update(req.body.product)
@@ -42,6 +45,7 @@ const update = (req, res, next) => {
     .catch(next)
 }
 
+// Does not work, may have to do with ownership and before methods
 const destroy = (req, res, next) => {
   req.product.remove()
     .then(() => res.sendStatus(204))
@@ -58,5 +62,5 @@ module.exports = controller({
   { method: setUser, only: ['index', 'show'] },
   { method: authenticate, except: ['index', 'show'] },
   { method: setModel(Product), only: ['show'] },
-  { method: setModel(Product, { forUser: true }), only: ['update', 'destroy'] }
+  { method: setModel(Product, { forUser: true }), only: ['destroy'] }
 ] })
