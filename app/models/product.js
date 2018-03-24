@@ -2,6 +2,8 @@
 
 const mongoose = require('mongoose')
 
+const Cart = require('./cart')
+
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -14,7 +16,11 @@ const productSchema = new mongoose.Schema({
   description: {
     type: String,
     default: 'None Given'
-  }
+  },
+  cartInstances: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Cart'
+  }]
 })
 
 const Product = mongoose.model('Product', productSchema)

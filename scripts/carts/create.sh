@@ -11,7 +11,9 @@ curl "${API}${URL_PATH}" \
   --data '{
     "cart": {
       "purchased": "'"${PURCHASED}"'",
-      "cartProducts": ["'"${PRODUCT_ID}"'"]
+      "cartProducts": [
+      "'"${PRODUCT_ID}"'"
+      ]
     }
   }'
 

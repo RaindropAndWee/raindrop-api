@@ -8,20 +8,44 @@ const authenticate = require('./concerns/authenticate')
 const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
+// working - showing nested object attributes
 const index = (req, res, next) => {
   Cart.find()
+    .populate('cartProducts')
     .then(carts => res.json({
       carts: carts.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
     }))
+    .then((something) => {
+      console.log('yet another log...', something)
+      return something
+    })
     .catch(next)
 }
 
+// not working - not showing nested object attributes
 const show = (req, res) => {
-  res.json({
-    cart: req.cart.toJSON({ virtuals: true, user: req.user })
-  })
+  Cart.findById(req.cart._id)
+    .populate('cartProducts')
+    .then((something) => {
+      console.log('after populate...', something.cartProducts[0].name)
+      return something
+    })
+    .then(cart => res.json({
+      cart: req.cart.toJSON({ virtuals: true, user: req.user })
+    }))
+    .then((serverResponse) => {
+      console.log('yet another log...', serverResponse)
+      return serverResponse
+    })
+    .catch(console.error)
 }
+
+// const show = (req, res) => {
+//   res.json({
+//     cart: req.cart.toJSON({ virtuals: true, user: req.user })
+//   })
+// }
 
 const create = (req, res, next) => {
   const cart = Object.assign(req.body.cart, {

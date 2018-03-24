@@ -2,6 +2,8 @@
 
 const mongoose = require('mongoose')
 
+const Product = require('./product')
+
 const cartSchema = new mongoose.Schema({
   purchased: {
     type: Boolean,
