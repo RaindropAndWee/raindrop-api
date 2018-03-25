@@ -5,21 +5,21 @@ const models = require('app/models')
 const Cart = models.cart
 
 const authenticate = require('./concerns/authenticate')
-const setUser = require('./concerns/set-current-user')
+// const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 // working - showing nested object attributes
 const index = (req, res, next) => {
-  Cart.find()
+  Cart.find({_owner: req.user._id})
     .populate('cartProducts')
     .then(carts => res.json({
       carts: carts.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
     }))
-    .then((something) => {
-      console.log('yet another log...', something)
-      return something
-    })
+    // .then((something) => {
+    //   console.log('yet another log...', something)
+    //   return something
+    // })
     .catch(next)
 }
 
@@ -82,6 +82,6 @@ module.exports = controller({
   destroy
 }, { before: [
   { method: authenticate },
-  { method: setModel(Cart), only: ['show'] },
-  { method: setModel(Cart, { forUser: true }), only: ['update', 'destroy', 'index', 'show'] }
+  // { method: setModel(Cart), only: ['show'] },
+  { method: setModel(Cart, { forUser: true }), only: ['update', 'destroy', 'show'] }
 ] })
