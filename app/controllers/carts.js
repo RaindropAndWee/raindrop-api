@@ -25,27 +25,27 @@ const index = (req, res, next) => {
 
 // not working - not showing nested object attributes
 const show = (req, res) => {
+  // `req.cart._id` below is passed into the `.findById()` method to select the
+  // requested car
   Cart.findById(req.cart._id)
     .populate('cartProducts')
     .then((something) => {
-      console.log('after populate...', something.cartProducts[0].name)
+      // Console.log prints car item with all nested products showing
+      // attributes. Hurray!
+      console.log('after populate...', something)
       return something
     })
+    // This is where we think something is messed up...
     .then(cart => res.json({
       cart: req.cart.toJSON({ virtuals: true, user: req.user })
     }))
+    // This next console.log is a huge mess of server response text
     .then((serverResponse) => {
       console.log('yet another log...', serverResponse)
       return serverResponse
     })
     .catch(console.error)
 }
-
-// const show = (req, res) => {
-//   res.json({
-//     cart: req.cart.toJSON({ virtuals: true, user: req.user })
-//   })
-// }
 
 const create = (req, res, next) => {
   const cart = Object.assign(req.body.cart, {
@@ -81,8 +81,7 @@ module.exports = controller({
   update,
   destroy
 }, { before: [
-  { method: setUser, only: ['index', 'show'] },
-  { method: authenticate, except: ['index', 'show'] },
+  { method: authenticate },
   { method: setModel(Cart), only: ['show'] },
-  { method: setModel(Cart, { forUser: true }), only: ['update', 'destroy'] }
+  { method: setModel(Cart, { forUser: true }), only: ['update', 'destroy', 'index', 'show'] }
 ] })
