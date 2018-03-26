@@ -37,7 +37,7 @@ const show = (req, res) => {
     })
     // This is where we think something is messed up...
     .then(cart => res.json({
-      cart: req.cart.toJSON({ virtuals: true, user: req.user })
+      cart: cart.toJSON({ virtuals: true, user: req.user })
     }))
     // This next console.log is a huge mess of server response text
     .then((serverResponse) => {
