@@ -21,6 +21,10 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  image_url: {
+    type: String,
+    default: 'http://res.cloudinary.com/ismurray/image/upload/v1522191569/nodemon.jpg'
+  },
   cartInstances: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Cart'

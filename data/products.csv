@@ -1,12 +1,12 @@
-name,price,description,category
-Laptop,1999.99,"Nice computer fun to use.","Electronics"
-Marker,2.99,"Cool writing utensil.","Home_and_Office"
-iPad,299.99,"Not very useful but great portable second monitor.","Electronics"
-Shoe,19.99,"Just one shoe - collect them all!","Clothing"
-Wallet,24.99,"Holds your munnies, made of leather.","Clothing"
-Water Bottle,12.99,"Delicious and utilitarian.","Home_and_Office"
-Dungeon,999.99,"Hide your dragons in here!","Sports_and_Outdoors"
-Dragon,999.99,"Hide them in your dungeon!","Entertainment"
-Headphones,14.99,"For your muzaks.","Electronics"
-Nodemon,1749.99,"Legendary Digimon that lives in the depths of the command line.","Entertainment"
-Grunt Server,3424.99,"The best waiter in your NPM package.","Electronics"
+name,price,description,category,image_url
+Laptop,1999.99,"Nice computer fun to use.","Electronics",'http://res.cloudinary.com/ptavarez/image/upload/v1522191854/Raindrop/macbook.jpg'
+Marker,2.99,"Cool writing utensil.","Home_and_Office",'http://res.cloudinary.com/ptavarez/image/upload/v1522191300/Raindrop/marker.png'
+iPad,299.99,"Not very useful but great portable second monitor.","Electronics",'http://res.cloudinary.com/ptavarez/image/upload/v1522191295/Raindrop/ipad.jpg'
+Shoe,19.99,"Just one shoe - collect them all!","Clothing",'http://res.cloudinary.com/ptavarez/image/upload/v1522191303/Raindrop/chucks.jpg'
+Wallet,24.99,"Holds your munnies, made of leather.","Clothing",'http://res.cloudinary.com/ptavarez/image/upload/v1522191306/Raindrop/wallet.jpg'
+Water Bottle,12.99,"Delicious and utilitarian.","Home_and_Office",'http://res.cloudinary.com/ptavarez/image/upload/v1522191310/Raindrop/waterbottle.jpg'
+Dungeon,999.99,"Hide your dragons in here!","Sports_and_Outdoors",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/dungeon.jpg'
+Dragon,999.99,"Hide them in your dungeon!","Entertainment",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/dragon.jpg'
+Headphones,14.99,"For your muzaks.","Electronics",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/headphones.jpg'
+Nodemon,1749.99,"Legendary Digimon that lives in the depths of the command line.","Entertainment",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/nodemon.jpg'
+Grunt Server,3424.99,"The best waiter in your NPM package.","Electronics",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/grunt.svg'
