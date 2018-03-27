@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  image_url: {
+  imageUrl: {
     type: String,
     default: 'http://res.cloudinary.com/ismurray/image/upload/v1522191569/nodemon.jpg'
   },
