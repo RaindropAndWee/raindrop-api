@@ -1,12 +1,12 @@
-name,price,description
-Laptop,1999.99,Nice computer fun to use.
-Marker,2.99,Cool writing utensil.
-iPad,299.99,Not very useful but great portable second monitor.
-Shoe,19.99,Just one shoe - collect them all!
-Wallet,24.99,"Holds your munnies, made of leather"
-Water Bottle,12.99,Delicious and utilitarian.
-Dungeon,999.99,Hide your dragons in here!
-Dragon,999.99,Hide them in your dungeon!
-Headphones,14.99,For your muzaks.
-Nodemon,1749.99,Legendary Digimon that lives in the depths of the command line.
-Grunt Server,3424.99,The best waiter in your npm package.
+name,price,description,category
+Laptop,1999.99,"Nice computer fun to use.","Electronics"
+Marker,2.99,"Cool writing utensil.","Home_and_Office"
+iPad,299.99,"Not very useful but great portable second monitor.","Electronics"
+Shoe,19.99,"Just one shoe - collect them all!","Clothing"
+Wallet,24.99,"Holds your munnies, made of leather.","Clothing"
+Water Bottle,12.99,"Delicious and utilitarian.","Home_and_Office"
+Dungeon,999.99,"Hide your dragons in here!","Sports_and_Outdoors"
+Dragon,999.99,"Hide them in your dungeon!","Entertainment"
+Headphones,14.99,"For your muzaks.","Electronics"
+Nodemon,1749.99,"Legendary Digimon that lives in the depths of the command line.","Entertainment"
+Grunt Server,3424.99,"The best waiter in your NPM package.","Electronics"

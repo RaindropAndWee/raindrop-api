@@ -9,16 +9,27 @@ const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  Product.find()
-    .then(products => res.json({
-      products: products.map((e) =>
-        e.toJSON())
-    }))
-    .catch(next)
+  console.log('req.query is: ', req.query)
+  // if a category query has been sent, only fetch products that are in that category
+  if (req.query.category) {
+    Product.find(req.query)
+      .then(products => res.json({
+        products: products.map((e) =>
+          e.toJSON())
+      }))
+      .catch(next)
+  } else {
+    // Otherwise, return all products
+    Product.find()
+      .then(products => res.json({
+        products: products.map((e) =>
+          e.toJSON())
+      }))
+      .catch(next)
+  }
 }
 
 const show = (req, res) => {
-  console.log('Hello')
   res.json({
     product: req.product.toJSON()
   })
@@ -37,7 +48,6 @@ const create = (req, res, next) => {
 
 // Does not work, may have to do with ownership and before methods
 const update = (req, res, next) => {
-  console.log('Hello')
   delete req.body.product._owner  // disallow owner reassignment.
 
   req.product.update(req.body.product)
