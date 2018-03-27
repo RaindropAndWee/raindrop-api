@@ -13,29 +13,30 @@ const create = (req, res, next) => {
       res.status(201)
         .json({
           token: token.toJSON({ virtuals: true, user: req.user })
-        })).then(() => {
-          // Set your secret key: remember to change this to your live secret key in production
-          // See your keys here: https://dashboard.stripe.com/account/apikeys
-          // Token is created using Checkout or Elements!
-          // Get the payment token ID submitted by the form:
-          const token = req.body.token.token_id // Using Express
+        }))
+    .then(() => {
+      // Set your secret key: remember to change this to your live secret key in production
+      // See your keys here: https://dashboard.stripe.com/account/apikeys
+      // Token is created using Checkout or Elements!
+      // Get the payment token ID submitted by the form:
+      const token = req.body.token.token_id // Using Express
 
-          // Sends a charge request to Stripe's API with all needed Tx data:
-          stripe.charges.create({
-            // currently Tx amount is hard-coded TODO: make it ref actual cart amount
-            amount: 2431,
-            // raindrop only accepts USD, so currency is hard coded
-            currency: 'usd',
-            // description is hard coded TODO: make description dynamic to let administator know items that were sold
-            description: 'Drop Item',
-            // source is the unique token provided to each user by stripe
-            source: token
-          })
-          .then((something) => {
-            console.log('something is ', something)
-            return something
-          })
-        })
+      // Sends a charge request to Stripe's API with all needed Tx data:
+      stripe.charges.create({
+        amount: req.body.token.total,
+        // raindrop only accepts USD, so currency is hard coded
+        currency: 'usd',
+        // description is hard coded TODO: make description dynamic to let administator know items that were sold
+        description: 'Drop Item',
+        // source is the unique token provided to each user by stripe
+        source: token
+      })
+      .then((something) => {
+        console.log('something is ', something)
+        return something
+      })
+      .catch(console.error)
+    })
     .catch(next)
 }
 
