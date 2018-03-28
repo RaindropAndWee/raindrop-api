@@ -18,6 +18,15 @@ const index = (req, res, next) => {
           e.toJSON())
       }))
       .catch(next)
+  // if a search=true parameter has been sent, use the text index $search query
+  // to find all products that contain the given word/words in any text fields
+  } else if (req.query.search) {
+    Product.find({ $text: { $search: req.query.searchEntry } })
+      .then(products => res.json({
+        products: products.map((e) =>
+          e.toJSON())
+      }))
+      .catch(next)
   } else {
     // Otherwise, return all products
     Product.find()
