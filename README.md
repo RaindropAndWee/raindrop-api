@@ -40,8 +40,8 @@ All data returned from API actions is formatted as JSON.
 - [Cart Documentation](docs/cart.md)
 
 ## Entity Relationship Diagram (ERD)
-![ERD1]https://imgur.com/g3d0XLB
-![ERD2]https://imgur.com/upjiUyv
+![ERD1](https://i.imgur.com/g3d0XLB.jpg)
+![ERD2]https://i.imgur.com/upjiUyv.jpg
 
 ## Technologies Used
 * Node.js
