@@ -9,7 +9,7 @@ const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  console.log('req.query is: ', req.query)
+  // console.log('req.query is: ', req.query)
   // if a category query has been sent, only fetch products that are in that category
   if (req.query.category) {
     Product.find(req.query)
