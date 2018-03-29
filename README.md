@@ -55,7 +55,7 @@ All data returned from API actions is formatted as JSON.
 
 ## Entity Relationship Diagram (ERD)
 ![ERD1](http://res.cloudinary.com/ptavarez/image/upload/v1522329576/erd.jpg)
-![ERD2](http://res.cloudinary.com/ptavarez/image/upload/v1522329734/erd_2.jpg)
+![ERD2](http://res.cloudinary.com/ptavarez/image/upload/c_scale,h_937/v1522329734/erd_2.jpg)
 
 ## Technologies Used
 * Node.js
