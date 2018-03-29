@@ -10,9 +10,10 @@ const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
   console.log('req.query is: ', req.query)
-  // if a category query has been sent, only fetch products that are in that category
-  if (req.query.category) {
-    Product.find(req.query)
+  if (req.query.sortPrice) {
+    (req.query.category === 'all'
+    ? Product.find().sort({ price: req.query.order })
+    : Product.find({category: req.query.category}).sort({ price: req.query.order }))
       .then(products => res.json({
         products: products.map((e) =>
           e.toJSON())
@@ -27,6 +28,14 @@ const index = (req, res, next) => {
           e.toJSON())
       }))
       .catch(next)
+    // if a category query has been sent, only fetch products that are in that category
+  } else if (req.query.category) {
+    Product.find(req.query)
+      .then(products => res.json({
+        products: products.map((e) =>
+        e.toJSON())
+      }))
+  .catch(next)
   } else {
     // Otherwise, return all products
     Product.find()
