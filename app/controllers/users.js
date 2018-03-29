@@ -54,7 +54,7 @@ const signup = (req, res, next) => {
     })
     .then((user) => {
       if (user.password !== user.confirmPassword) {
-        console.log('inside if statement and user is ', user)
+        // console.log('inside if statement and user is ', user)
         return Promise.reject(new HttpError(400))
       }
     })

@@ -9,7 +9,7 @@ const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  console.log('req.query is: ', req.query)
+  // console.log('req.query is: ', req.query)
   if (req.query.sortPrice) {
     (req.query.category === 'all'
     ? Product.find().sort({ price: req.query.order })
