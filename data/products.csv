@@ -3,9 +3,9 @@ Laptop,1999.99,"Nice computer fun to use.","Electronics",'http://res.cloudinary.
 Marker,2.99,"Cool writing utensil.","homeAndOffice",'http://res.cloudinary.com/ptavarez/image/upload/v1522191300/Raindrop/marker.png'
 iPad,299.99,"Not very useful but great portable second monitor.","Electronics",'http://res.cloudinary.com/ptavarez/image/upload/v1522191295/Raindrop/ipad.jpg'
 Shoe,19.99,"Just one shoe - collect them all!","Clothing",'http://res.cloudinary.com/ptavarez/image/upload/v1522191303/Raindrop/chucks.jpg'
-Wallet,24.99,"Holds your munnies, made of leather.","Clothing",'http://res.cloudinary.com/ptavarez/image/upload/v1522191306/Raindrop/wallet.jpg'
+Wallet,24.99,"Holds your munnies, made of leather.","Clothing",https://res.cloudinary.com/duqjlnkij/image/upload/v1522299817/wallet_edit.jpg
 Water Bottle,12.99,"Delicious and utilitarian.","homeAndOffice",'http://res.cloudinary.com/ptavarez/image/upload/v1522191310/Raindrop/waterbottle.jpg'
-Dungeon,999.99,"Hide your dragons in here!","sportsAndOutdoors",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/dungeon.jpg'
+Dungeon,999.99,"Hide your dragons in here!","sportsAndOutdoors",https://res.cloudinary.com/duqjlnkij/image/upload/v1522299506/palace_edit.jpg
 Dragon,999.99,"Hide them in your dungeon!","Entertainment",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/dragon.jpg'
 Headphones,14.99,"For your muzaks.","Electronics",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/headphones.jpg'
 Nodemon,1749.99,"Legendary Digimon that lives in the depths of the command line.","Entertainment",'http://res.cloudinary.com/ismurray/image/upload/v1522191569/nodemon.jpg'
@@ -16,13 +16,13 @@ Book,22.95,"Like a kindle, but made out of trees.",Entertainment,http://res.clou
 Boardgame,34.99,"Roll dice, move pieces, alienate your friends and family by being a sore winner.",Entertainment,http://res.cloudinary.com/ptavarez/image/upload/v1522279929/jumanji.jpg
 Pool table,399.99,"Not to be confused with our Pool",Entertainment,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/pool-table.jpg
 Onesie,44.99,"Went out of style 14 years ago. Please help us get rid of these. Please.",Clothing,https://res.cloudinary.com/duqjlnkij/image/upload/v1522294908/onsie_e.jpg
-Crocks,49.99,"Embarrass your children while enjoying the pinnacle of comfort-forward footwear. Breathable, waterproof, and easy to clean.",Clothing,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/crocks.jpg
+Crocks,49.99,"Embarrass your children while enjoying the pinnacle of comfort-forward footwear. Breathable, waterproof, and easy to clean.",Clothing,https://res.cloudinary.com/duqjlnkij/image/upload/v1522298943/crocs_edit.jpg
 Parka,249.99,"Standard utilitarian jacket for those who live in cold climates. And don't know how to dress. And root for the Patriots.",Clothing,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/parka.jpg
-Speedo,27.5,"Show off what you've got, even if what you've got isn't much.",Clothing,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/speedo.jpg
-Water Bed,179.99,"Like our vintage onesies, these also went out of style 14 years ago. Buy one, get one free! Extra cost for shipping. They heavy AF.",homeAndOffice,http://res.cloudinary.com/ptavarez/image/upload/v1522279929/waterbed.jpg
+Speedo,27.5,"Show off what you've got, even if what you've got isn't much.",Clothing,https://res.cloudinary.com/duqjlnkij/image/upload/v1522298943/speedo_edit.jpg
+Water Bed,179.99,"Like our vintage onesies, these also went out of style 14 years ago. Buy one, get one free! Extra cost for shipping. They heavy AF.",homeAndOffice,https://res.cloudinary.com/duqjlnkij/image/upload/v1522298943/waterbed_edit.jpg
 Desk,119.99,"Standard desk. Is not motorized and lacks adjustable height like those silly machines popularized by tech employees.",homeAndOffice,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/desk.jpg
 Kitchen Sink,265.99,"Put everything in it!",homeAndOffice,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/kitchen-sink.jpg
-Slip and Slide,385.99,"A long sheet of thin plastic.",sportsAndOutdoors,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/slip-and-slide.jpg
+Slip and Slide,385.99,"A long sheet of thin plastic.",sportsAndOutdoors,https://res.cloudinary.com/duqjlnkij/image/upload/v1522298944/slipslide_edit.jpg
 Tennis Court,24950.50,"This is actually heavy discounted. Just ask anybody who actually works in real estate.",sportsAndOutdoors,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/tennis-court.jpg
-Pool,1399.99,"Not to be confused with our Pool Table.",sportsAndOutdoors,http://res.cloudinary.com/ptavarez/image/upload/v1522279929/pool.jpg
+Pool,1399.99,"Not to be confused with our Pool Table.",sportsAndOutdoors,https://res.cloudinary.com/duqjlnkij/image/upload/v1522299058/pool_edit.jpg
 Basketball Hoop,424.99,"Get one to practice on, and one day you might just be as good as Obama.",sportsAndOutdoors,http://res.cloudinary.com/ptavarez/image/upload/v1522279928/hoops.jpg
